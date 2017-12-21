@@ -28,6 +28,7 @@
 - (void)windowWillExitFullScreen:(id)arg1;
 - (void)windowWillEnterFullScreen:(id)arg1;
 - (struct CGRect)window:(id)arg1 willPositionSheet:(id)arg2 usingRect:(struct CGRect)arg3;
+- (void)_updateFirstResponder;
 - (void)_updateAccessoryBar;
 - (void)_updateToolbarItem;
 - (void)_popoverWillShow:(id)arg1;

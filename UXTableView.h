@@ -72,10 +72,13 @@
 - (id)menuForEvent:(id)arg1;
 - (void)_menuDidEndTracking:(id)arg1;
 - (void)_menuDidBeginTracking:(id)arg1;
+- (void)scrollToRowAtIndexPath:(id)arg1 atScrollPosition:(long long)arg2 animated:(BOOL)arg3;
 - (void)deselectRowAtIndexPath:(id)arg1 animated:(BOOL)arg2;
 - (void)selectRowAtIndexPath:(id)arg1 animated:(BOOL)arg2 scrollPosition:(long long)arg3;
 - (id)indexPathForSelectedRow;
 - (id)indexPathForClickedRow;
+- (id)footerViewForSection:(long long)arg1;
+- (id)headerViewForSection:(long long)arg1;
 - (void)moveRowAtIndexPath:(id)arg1 toIndexPath:(id)arg2;
 - (void)reloadRowsAtIndexPaths:(id)arg1 withRowAnimation:(long long)arg2;
 - (void)deleteRowsAtIndexPaths:(id)arg1 withRowAnimation:(long long)arg2;
@@ -88,9 +91,12 @@
 - (void)sizeToFit;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (long long)numberOfRowsInSection:(long long)arg1;
+- (id)dequeueReusableHeaderFooterViewWithIdentifier:(id)arg1;
 - (id)dequeueReusableHeaderFooterViewWithReuseIdentifier:(id)arg1 forSection:(long long)arg2;
 - (id)dequeueReusableCellWithReuseIdentifier:(id)arg1 forIndexPath:(id)arg2;
+- (id)dequeueReusableCellWithIdentifier:(id)arg1;
 - (id)dequeueReusableCellWithIdentifier:(id)arg1 forIndexPath:(id)arg2;
+- (void)registerClass:(Class)arg1 forHeaderFooterViewReuseIdentifier:(id)arg2;
 - (void)registerClass:(Class)arg1 forCellReuseIdentifier:(id)arg2;
 - (id)cellForRowAtIndexPath:(id)arg1;
 - (void)setDelegate:(id)arg1;

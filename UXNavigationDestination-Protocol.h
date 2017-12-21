@@ -12,6 +12,6 @@
 @protocol UXNavigationDestination <NSObject, NSSecureCoding>
 @property(readonly, nonatomic) UXAuxiliaryNavigationStore *auxiliaryNavigationStore;
 @property(readonly, nonatomic) NSString *destinationTitle;
-@property(readonly, nonatomic) NSString *destinationType;
+@property(readonly, nonatomic) NSString *destinationIdentifier;
 @end
 

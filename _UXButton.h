@@ -19,7 +19,7 @@
 - (BOOL)accessibilityPerformPress;
 - (id)accessibilityLabel;
 - (id)_textColorForState:(unsigned long long)arg1;
-- (id)_AttributedStringForState:(unsigned long long)arg1;
+- (id)_attributedStringForState:(unsigned long long)arg1;
 - (void)setTitle:(id)arg1;
 - (void)mouseUp:(id)arg1;
 - (void)viewWillMoveToSuperview:(id)arg1;

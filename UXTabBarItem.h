@@ -6,13 +6,15 @@
 
 #import <UXKit/UXBarItem.h>
 
-@class NSSet;
+@class NSArray, NSSet;
 
 @interface UXTabBarItem : UXBarItem
 {
     NSSet *_possibleTitles;
+    NSArray *_representedSegments;
 }
 
+@property(copy, nonatomic) NSArray *representedSegments; // @synthesize representedSegments=_representedSegments;
 @property(copy, nonatomic) NSSet *possibleTitles; // @synthesize possibleTitles=_possibleTitles;
 - (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1;

@@ -22,11 +22,13 @@
 - (void)adjustForInsertionOfItems:(id)arg1;
 - (void)adjustForInsertionOfItem:(unsigned long long)arg1;
 - (void)removeSectionItemIndexes:(id)arg1;
+- (void)removeItemsInRange:(struct _NSRange)arg1;
 - (void)removeItem:(unsigned long long)arg1;
 - (void)addSectionItemIndexes:(id)arg1;
 - (void)addItemsInRange:(struct _NSRange)arg1;
 - (void)addItem:(unsigned long long)arg1;
 - (BOOL)containsItem:(unsigned long long)arg1;
+- (id)items;
 - (unsigned long long)lastItem;
 - (unsigned long long)firstItem;
 - (unsigned long long)itemCount;

@@ -6,7 +6,7 @@
 
 #import <UXKit/UXCollectionViewLayout.h>
 
-@class NSDictionary, NSMutableDictionary;
+@class NSDictionary, NSMutableDictionary, _UXFlowLayoutInfo;
 
 @interface UXCollectionViewFlowLayout : UXCollectionViewLayout
 {
@@ -27,7 +27,7 @@
     struct CGSize _headerReferenceSize;
     struct CGSize _footerReferenceSize;
     struct NSEdgeInsets _sectionInset;
-    id _data;
+    _UXFlowLayoutInfo *_data;
     struct CGSize _currentLayoutSize;
     NSMutableDictionary *_insertedItemsAttributesDict;
     NSMutableDictionary *_insertedSectionHeadersAttributesDict;

@@ -10,6 +10,7 @@
 
 @interface _UXViewControllerOneToOneTransitionContext : _UXViewControllerTransitionContext
 {
+    CDUnknownBlockType arbitraryTransitionCompletionHandler;
     UXViewController *_fromViewController;
     UXViewController *_toViewController;
     struct CGRect _fromStartFrame;
@@ -24,6 +25,8 @@
 @property(nonatomic) struct CGRect fromStartFrame; // @synthesize fromStartFrame=_fromStartFrame;
 @property(retain, nonatomic) UXViewController *toViewController; // @synthesize toViewController=_toViewController;
 @property(retain, nonatomic) UXViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
+- (void)setArbitraryTransitionCompletionHandler:(CDUnknownBlockType)arg1;
+- (CDUnknownBlockType)arbitraryTransitionCompletionHandler;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) UXView *fromView;
 @property(readonly, nonatomic) UXView *toView;

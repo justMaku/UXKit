@@ -9,6 +9,7 @@
 @class NSColor;
 
 @interface NSView (UXKit)
+- (id)enclosingViewOfClass:(Class)arg1;
 @property(nonatomic) NSColor *backgroundColor;
 @end
 

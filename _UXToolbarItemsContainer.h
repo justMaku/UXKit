@@ -17,15 +17,18 @@
     BOOL _isTransitioning;
     NSArray *_items;
     double _interitemSpacing;
+    double _baselineOffsetFromBottom;
 }
 
 + (id)toolbarItemsContainerForToolbar:(id)arg1 items:(id)arg2;
+@property(nonatomic) double baselineOffsetFromBottom; // @synthesize baselineOffsetFromBottom=_baselineOffsetFromBottom;
 @property(nonatomic) double interitemSpacing; // @synthesize interitemSpacing=_interitemSpacing;
 @property(readonly, nonatomic) NSArray *items; // @synthesize items=_items;
 - (void).cxx_destruct;
+- (double)lastBaselineOffsetFromBottom;
 - (void)updateConstraints;
-- (void)prepareForTransistion;
-- (id)init;
+- (void)prepareForTransition;
+- (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -29,6 +29,7 @@
 - (void)setPopoverContentSize:(struct CGSize)arg1 animated:(BOOL)arg2;
 @property(readonly, nonatomic, getter=isPopoverVisible) BOOL popoverVisible;
 @property(nonatomic) long long popoverBehavior;
+- (BOOL)popoverShouldClose:(id)arg1;
 - (void)popoverWillShow:(id)arg1;
 - (void)popoverDidClose:(id)arg1;
 - (id)popover;

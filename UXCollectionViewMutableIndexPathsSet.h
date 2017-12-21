@@ -25,6 +25,9 @@
 - (void)removeIndexPathsSet:(id)arg1;
 - (void)removeIndexPaths:(id)arg1;
 - (void)removeIndexPath:(id)arg1;
+- (void)removeSections:(id)arg1;
+- (void)removeSection:(long long)arg1;
+- (void)removeSection:(long long)arg1 itemsInRange:(struct _NSRange)arg2;
 - (void)addSection:(long long)arg1 itemsInRange:(struct _NSRange)arg2;
 - (void)addIndexPathsSet:(id)arg1;
 - (void)addIndexPaths:(id)arg1;

@@ -26,6 +26,7 @@
 - (id)lastIndexPath;
 - (id)firstIndexPath;
 - (id)allIndexPaths;
+- (id)itemsInSection:(long long)arg1;
 - (id)indexPathsForSections:(id)arg1;
 - (id)indexPathsForSection:(long long)arg1;
 - (id)sections;

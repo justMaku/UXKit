@@ -7,6 +7,6 @@
 #import "NSResponder.h"
 
 @interface NSResponder (UXKit)
-- (BOOL)belongsToViewHierarchy:(id)arg1;
+- (BOOL)isInResponderChainOf:(id)arg1;
 @end
 

@@ -6,7 +6,12 @@
 
 #import "NSObject.h"
 
+@class NSLayoutDimension, NSLayoutYAxisAnchor;
+
 @protocol UXLayoutSupport <NSObject>
+@property(readonly) NSLayoutDimension *heightAnchor;
+@property(readonly) NSLayoutYAxisAnchor *bottomAnchor;
+@property(readonly) NSLayoutYAxisAnchor *topAnchor;
 @property(nonatomic) double length;
 @end
 

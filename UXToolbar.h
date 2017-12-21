@@ -6,17 +6,30 @@
 
 #import <UXKit/UXBar.h>
 
+@class NSArray;
+
 @interface UXToolbar : UXBar
 {
     id <UXToolbarDelegate> _delegate;
+    NSArray *_items;
 }
 
+@property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) __weak id <UXToolbarDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (long long)barPosition;
 - (void)_beginInteractiveTransitionForItems:(id)arg1;
 - (void)_setItems:(id)arg1 animated:(BOOL)arg2 duration:(double)arg3;
 - (void)setItems:(id)arg1 animated:(BOOL)arg2;
+- (void)otherMouseDragged:(id)arg1;
+- (void)rightMouseDragged:(id)arg1;
+- (void)mouseDragged:(id)arg1;
+- (void)mouseMoved:(id)arg1;
+- (void)otherMouseUp:(id)arg1;
+- (void)rightMouseUp:(id)arg1;
+- (void)mouseUp:(id)arg1;
+- (void)otherMouseDown:(id)arg1;
+- (void)rightMouseDown:(id)arg1;
 - (void)mouseDown:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

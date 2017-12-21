@@ -11,8 +11,6 @@
 @class NSString;
 
 @interface NSTextView (Compatibility) <UITextInputTraits>
-- (struct NSEdgeInsets)__textContainerInset;
-- (void)__setTextContainerInset:(struct NSEdgeInsets)arg1;
 @property(nonatomic) unsigned long long textAlignment;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 @property(copy, nonatomic) NSString *text;

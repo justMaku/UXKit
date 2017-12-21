@@ -22,6 +22,7 @@
 @property(nonatomic) __weak UXSourceController *sourceController; // @synthesize sourceController=_sourceController;
 - (void).cxx_destruct;
 - (id)_dictionaryForNamespace:(id)arg1;
+- (id)debugDescription;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)_allowedClassesForNSCoding;

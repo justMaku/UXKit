@@ -15,11 +15,14 @@
     struct {
         unsigned int invalidateDataSource:1;
         unsigned int invalidateEverything:1;
+        unsigned int invalidateContentSize:1;
     } _invalidationContextFlags;
 }
 
 - (id)_updateItems;
 - (void)_setUpdateItems:(id)arg1;
+- (void)setInvalidateContentSize:(BOOL)arg1;
+- (BOOL)invalidateContentSize;
 - (void)_setInvalidateEverything:(BOOL)arg1;
 @property(readonly, nonatomic) BOOL invalidateEverything;
 - (void)_setInvalidateDataSourceCounts:(BOOL)arg1;

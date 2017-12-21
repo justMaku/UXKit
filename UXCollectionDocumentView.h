@@ -15,12 +15,14 @@
 
 @property(nonatomic) __weak UXCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 - (id)accessibilityHitTest:(struct CGPoint)arg1;
-- (BOOL)acceptsFirstResponder;
 - (void)prepareContentInRect:(struct CGRect)arg1;
+- (BOOL)acceptsFirstResponder;
 - (void)_invalidateFocus;
+- (void)layout;
 - (BOOL)isFlipped;
 - (BOOL)wantsUpdateLayer;
 - (BOOL)isOpaque;
+- (void)dragImage:(id)arg1 at:(struct CGPoint)arg2 offset:(struct CGSize)arg3 event:(id)arg4 pasteboard:(id)arg5 source:(id)arg6 slideBack:(BOOL)arg7;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

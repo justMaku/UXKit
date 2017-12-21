@@ -14,10 +14,12 @@
 {
     double _backingScaleFactor;
     struct CGSize _proposedSize;
+    NSString *accessibilityLabel;
     NSImage *_image;
 }
 
 @property(retain, nonatomic) NSImage *image; // @synthesize image=_image;
+@property(retain, nonatomic) NSString *accessibilityLabel; // @synthesize accessibilityLabel;
 - (void).cxx_destruct;
 - (void)sizeToFit;
 - (void)_updateBackingScaleFactorForWindow:(id)arg1;
@@ -32,7 +34,6 @@
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties
-@property(retain, nonatomic) NSString *accessibilityLabel;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

@@ -30,7 +30,6 @@
     double _duration;
     long long _state;
     CDUnknownBlockType _interactiveUpdateHandler;
-    CDUnknownBlockType _postInteractiveCompletionHandler;
     long long _presentationStyle;
     double _percentOffset;
     id <UXViewControllerAnimatedTransitioning> _animator;
@@ -48,7 +47,6 @@
 @property(nonatomic) double percentOffset; // @synthesize percentOffset=_percentOffset;
 @property(nonatomic, getter=isPresentation) BOOL presentation; // @synthesize presentation=_presentation;
 @property(nonatomic) long long presentationStyle; // @synthesize presentationStyle=_presentationStyle;
-@property(copy, nonatomic) CDUnknownBlockType postInteractiveCompletionHandler; // @synthesize postInteractiveCompletionHandler=_postInteractiveCompletionHandler;
 @property(copy, nonatomic) CDUnknownBlockType interactiveUpdateHandler; // @synthesize interactiveUpdateHandler=_interactiveUpdateHandler;
 @property(nonatomic) long long state; // @synthesize state=_state;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
@@ -83,6 +81,7 @@
 - (id)init;
 
 // Remaining properties
+@property(copy, nonatomic) CDUnknownBlockType arbitraryTransitionCompletionHandler;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

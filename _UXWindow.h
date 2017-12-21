@@ -10,6 +10,7 @@
 {
 }
 
+- (void)cancelOperation:(id)arg1;
 - (BOOL)makeFirstResponder:(id)arg1;
 - (void)recalculateKeyViewLoop;
 - (void)tintColorDidChange;

@@ -37,8 +37,8 @@
 - (id)siblingAboveItem:(id)arg1;
 - (id)siblingAfterItem:(id)arg1;
 - (id)siblingBeforeItem:(id)arg1;
-- (id)visibleCellsInSection:(unsigned long long)arg1;
-- (id)visibleSupplementaryViewsInSection:(unsigned long long)arg1;
+- (id)visibleCellsInSection:(long long)arg1;
+- (id)visibleSupplementaryViewsInSection:(long long)arg1;
 - (void)_dumpVisibleChildren;
 - (void)accessibilityPrepareLayout;
 - (void)accessibilityInvalidateLayout;

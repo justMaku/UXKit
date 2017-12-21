@@ -6,14 +6,16 @@
 
 #import "NSObject.h"
 
-@class NSGestureRecognizer;
+@class NSEvent, NSGestureRecognizer, NSTouch;
 
 @protocol NSGestureRecognizerDelegate <NSObject>
 
 @optional
+- (BOOL)gestureRecognizer:(NSGestureRecognizer *)arg1 shouldReceiveTouch:(NSTouch *)arg2;
 - (BOOL)gestureRecognizer:(NSGestureRecognizer *)arg1 shouldBeRequiredToFailByGestureRecognizer:(NSGestureRecognizer *)arg2;
 - (BOOL)gestureRecognizer:(NSGestureRecognizer *)arg1 shouldRequireFailureOfGestureRecognizer:(NSGestureRecognizer *)arg2;
 - (BOOL)gestureRecognizer:(NSGestureRecognizer *)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(NSGestureRecognizer *)arg2;
 - (BOOL)gestureRecognizerShouldBegin:(NSGestureRecognizer *)arg1;
+- (BOOL)gestureRecognizer:(NSGestureRecognizer *)arg1 shouldAttemptToRecognizeWithEvent:(NSEvent *)arg2;
 @end
 

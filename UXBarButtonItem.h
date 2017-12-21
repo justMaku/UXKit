@@ -8,11 +8,14 @@
 
 #import "UXKitAppearance.h"
 
-@class NSColor, NSString, NSView, UXViewController;
+@class NSColor, NSLayoutAnchor, NSString, NSView, UXViewController;
 
 @interface UXBarButtonItem : UXBarItem <UXKitAppearance>
 {
     NSView *__view;
+    BOOL _ignoresMultiClick;
+    BOOL _condensed;
+    float _visibilityPriority;
     NSColor *_tintColor;
     long long _tintAdjustmentMode;
     long long _style;
@@ -23,14 +26,19 @@
     NSString *_toolTip;
     NSString *_keyEquivalent;
     unsigned long long _keyEquivalentModifierMask;
+    NSLayoutAnchor *_baselineAnchor;
     UXViewController *_contentViewController;
     long long _systemItem;
     UXBarButtonItem *__widthConstrainingItem;
 }
 
 @property(nonatomic, setter=_setWidthConstrainingItem:) __weak UXBarButtonItem *_widthConstrainingItem; // @synthesize _widthConstrainingItem=__widthConstrainingItem;
+@property(nonatomic) float visibilityPriority; // @synthesize visibilityPriority=_visibilityPriority;
+@property(nonatomic, getter=isCondensed) BOOL condensed; // @synthesize condensed=_condensed;
 @property(readonly, nonatomic) long long systemItem; // @synthesize systemItem=_systemItem;
 @property(readonly, nonatomic) UXViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
+@property(retain, nonatomic) NSLayoutAnchor *baselineAnchor; // @synthesize baselineAnchor=_baselineAnchor;
+@property(nonatomic) BOOL ignoresMultiClick; // @synthesize ignoresMultiClick=_ignoresMultiClick;
 @property(nonatomic) unsigned long long keyEquivalentModifierMask; // @synthesize keyEquivalentModifierMask=_keyEquivalentModifierMask;
 @property(retain, nonatomic) NSString *keyEquivalent; // @synthesize keyEquivalent=_keyEquivalent;
 @property(retain, nonatomic) NSString *toolTip; // @synthesize toolTip=_toolTip;
@@ -43,12 +51,15 @@
 @property(readonly, nonatomic) NSView *_view;
 - (void)_performAction:(id)arg1;
 - (id)_viewOfClass:(Class)arg1;
+@property(readonly, copy) NSString *description;
 - (void)setImage:(id)arg1;
 - (void)setEnabled:(BOOL)arg1;
+- (void)setAccessibilityLabel:(id)arg1;
 - (void)setTitle:(id)arg1;
 - (void)tintColorDidChange;
 @property(nonatomic) long long tintAdjustmentMode; // @synthesize tintAdjustmentMode=_tintAdjustmentMode;
 @property(retain, nonatomic) NSColor *tintColor; // @synthesize tintColor=_tintColor;
+- (double)preferredSpacingToItem:(id)arg1 proposedSpacing:(double)arg2;
 - (id)initWithStyle:(long long)arg1 target:(id)arg2 action:(SEL)arg3;
 - (id)initWithContentViewController:(id)arg1;
 - (id)initWithCustomView:(id)arg1;
@@ -58,7 +69,6 @@
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 

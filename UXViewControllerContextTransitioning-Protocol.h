@@ -21,5 +21,8 @@
 - (BOOL)isInteractive;
 - (BOOL)isAnimated;
 - (UXView *)containerView;
+
+@optional
+@property(copy, nonatomic) CDUnknownBlockType arbitraryTransitionCompletionHandler;
 @end
 

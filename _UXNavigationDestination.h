@@ -12,17 +12,15 @@
 
 @interface _UXNavigationDestination : NSObject <UXNavigationDestination>
 {
-    NSString *_destinationType;
+    NSString *_destinationIdentifier;
     NSString *_destinationTitle;
     UXAuxiliaryNavigationStore *_auxiliaryNavigationStore;
 }
 
 + (BOOL)supportsSecureCoding;
-+ (id)destinationForNavigationIdentifier:(id)arg1 title:(id)arg2;
-+ (id)destinationForViewController:(id)arg1;
 @property(retain, nonatomic) UXAuxiliaryNavigationStore *auxiliaryNavigationStore; // @synthesize auxiliaryNavigationStore=_auxiliaryNavigationStore;
 @property(retain, nonatomic) NSString *destinationTitle; // @synthesize destinationTitle=_destinationTitle;
-@property(retain, nonatomic) NSString *destinationType; // @synthesize destinationType=_destinationType;
+@property(retain, nonatomic) NSString *destinationIdentifier; // @synthesize destinationIdentifier=_destinationIdentifier;
 - (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

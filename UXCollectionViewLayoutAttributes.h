@@ -22,7 +22,6 @@
     long long _zIndex;
     BOOL _isFloating;
     struct CGRect _floatingFrame;
-    BOOL _isFloatingPinned;
     NSIndexPath *_indexPath;
     NSString *_representedElementKind;
     NSString *_isCloneString;
@@ -32,13 +31,16 @@
         unsigned int isHidden:1;
         unsigned int isClone:1;
     } _layoutFlags;
+    BOOL _isPushing;
+    double _verticalOffsetFromFloatingPosition;
 }
 
 + (id)layoutAttributesForDecorationViewOfKind:(id)arg1 withIndexPath:(id)arg2;
 + (id)layoutAttributesForSupplementaryViewOfKind:(id)arg1 withIndexPath:(id)arg2;
 + (id)layoutAttributesForCellWithIndexPath:(id)arg1;
+@property(nonatomic) double verticalOffsetFromFloatingPosition; // @synthesize verticalOffsetFromFloatingPosition=_verticalOffsetFromFloatingPosition;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
-@property(nonatomic) BOOL isFloatingPinned; // @synthesize isFloatingPinned=_isFloatingPinned;
+@property(nonatomic) BOOL isPushing; // @synthesize isPushing=_isPushing;
 @property(nonatomic) struct CGRect floatingFrame; // @synthesize floatingFrame=_floatingFrame;
 @property(nonatomic) BOOL isFloating; // @synthesize isFloating=_isFloating;
 @property(nonatomic) long long zIndex; // @synthesize zIndex=_zIndex;

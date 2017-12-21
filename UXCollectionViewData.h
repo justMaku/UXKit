@@ -42,6 +42,7 @@
 - (id)knownDecorationElementKinds;
 - (id)knownSupplementaryElementKinds;
 - (id)existingSupplementaryLayoutAttributes;
+- (id)existingSupplementaryLayoutAttributesWithMinimalIndexPathLength:(unsigned long long)arg1;
 - (id)existingSupplementaryLayoutAttributesInSection:(long long)arg1;
 - (id)layoutAttributesForElementsInRect:(struct CGRect)arg1;
 - (id)layoutAttributesForElementsInSection:(long long)arg1;
